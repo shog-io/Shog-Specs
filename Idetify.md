@@ -17,10 +17,7 @@ This structure makes up the Shog Id
 ### Unique Identifier
 The Shog ID is generated using ECDSA public key and creation timestamp, similar to Base58check:
 
-Calculate SHA256 hash of the public key and take the last 20 bytes
-Prepend current millisecond timestamp to the result from step 1 and calculate SHA256 hash
-Perform double SHA256 on the previous result and append the first 4 bytes as checksum
-Encode the final result using Base58
+Calculate the keccak256 hash of a secp256k1 public key concatenated with the current Unix timestamp (in seconds), and take the last 20 bytes
 
 ### Name
 
