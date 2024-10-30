@@ -1,4 +1,4 @@
-# Message
+# Messages
 
 Shog is a message delivery protocol.
 
